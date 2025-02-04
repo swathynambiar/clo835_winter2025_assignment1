@@ -25,7 +25,7 @@ jobs:
     - name: Build, Tag, and Push MySQL Image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: mysql  # Changed repository name to 'mysql'
+        ECR_REPOSITORY:webapp/my_db   # Changed repository name to 'mysql'
         IMAGE_TAG: latest
       run: |
         docker build -f Dockerfile_mysql -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -34,7 +34,7 @@ jobs:
     - name: Build, Tag, and Push WebApp Image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: webapp  # Changed repository name to 'webapp'
+        ECR_REPOSITORY:webapp/my_app  # Changed repository name to 'webapp'
         IMAGE_TAG: latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
