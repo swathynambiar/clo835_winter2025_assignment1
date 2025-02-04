@@ -1,11 +1,11 @@
 variable "subnet_id" {
   description = "The Subnet ID where EC2 will be launched"
-  default     = "subnet-046ebc06358626f87"  # Replace with your Subnet ID
+  default     = "subnet-0910522f3c8e328f0"  # Replace with your Subnet ID
 }
 
 variable "vpc_id" {
   description = "The VPC ID where EC2 will be launched"
-  default     = "vpc-0360b43b62294830c"     # Replace with your VPC ID
+  default     = "vpc-0ddb7445dcd4ae112"     # Replace with your VPC ID
 }
 
 variable "aws_region" {

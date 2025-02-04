@@ -15,7 +15,7 @@ data "aws_vpc" "default_vpc" {
 
 # Create Security Group for EC2 instance to allow necessary traffic
 resource "aws_security_group" "my_ec2_security_group" {
-  name        = "my-ec2-sg"
+  name        = "my-ec2-securitygroup"
   description = "Security group for EC2 instance allowing HTTP, MySQL, and SSH"
   vpc_id      = data.aws_vpc.default_vpc.id
 
